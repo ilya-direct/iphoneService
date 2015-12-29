@@ -1,0 +1,5 @@
+AddDefaultCharset utf-8
+AuthType Basic
+AuthName "My Protected Area"
+AuthUserFile /home/u182420072/public_html/.htpasswd
+Require valid-user

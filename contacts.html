@@ -1,0 +1,644 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Контакты</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+	<!-- Bootstrap -->
+	<link rel="stylesheet" type="text/css" href="styles/bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="styles/reset-min.css" />
+	<link rel="stylesheet" type="text/css" href="styles/main.css" />
+	<link href="styles/jquery.bxslider.css" rel="stylesheet" />
+	<link href="https://file.myfontastic.com/n6vo44Re5QaWo8oCKShBs7/icons.css" rel="stylesheet" />
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/respond.js"></script>
+	<script src="js/jquery.bxslider.min.js"></script>
+	<script src="js/jquery.maskedinput-1.4.1.js"></script>
+    <script type="text/javascript" src="js/jquery.dropdown.min.js"></script>
+	
+	<link rel="stylesheet" type="text/css" href="source/jquery.fancybox.css?v=2.1.5" media="screen" />
+	<script type="text/javascript" src="source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function(){  	  
+			$('.bxslider').bxSlider({
+				pager: true,
+				adaptiveHeight: true,
+				speed: 800
+			}); 
+			$('.bxslider2').bxSlider({
+				pager: false,
+				adaptiveHeight: true
+			}); 
+			
+			$('a[href*=#f]').bind("click", function(e){
+				var anchor = $(this);
+				$('html, body').stop().animate({
+					scrollTop: $(anchor.attr('href')).offset().top
+				}, 1000);
+				e.preventDefault();
+			});
+			
+			
+			jQuery(function($) {
+				$.mask.definitions['~']='[+-]';
+				$('#phone').mask('+7-999-999-99-99');
+				$('#phone2').mask('+7-999-999-99-99');
+				$('#phone3').mask('+7-999-999-99-99');
+				$('#phone4').mask('+7-999-999-99-99');
+				$('#phone5').mask('+7-999-999-99-99');
+			});
+			
+			
+			var $menu = $("#wr_main_menu");
+			$(window).scroll(function(){
+				if ( $(this).scrollTop() > 100 && $menu.hasClass("default") ){
+					$menu.removeClass("default").addClass("fixed");
+				} else if($(this).scrollTop() <= 100 && $menu.hasClass("fixed")) {
+					$menu.removeClass("fixed").addClass("default");
+				}
+			});
+			
+			$('.fancybox').fancybox();
+				
+			
+		});
+	</script>
+	<script>
+		$(document).ready(function(){  	  
+			var $menu = $("#btn_up");
+			$(window).scroll(function(){
+				if ( $(this).scrollTop() > 100 && $menu.hasClass("defaultt") ){
+					$menu.removeClass("defaultt").addClass("fixedd");
+				} else if($(this).scrollTop() <= 100 && $menu.hasClass("fixedd")) {
+					$menu.removeClass("fixedd").addClass("defaultt");
+				}
+			});
+		});
+	</script>
+</head>
+<body>
+	<div id="f1"></div>
+	<a class="btn_up defaultt" id="btn_up" href="#f1"></a>
+	<header>
+		<div class = "row">
+			<div class = "col-xs-12 col-sm-4 col-md-4 col-lg-4">
+				<div class="logo">
+					<a href="#">
+						<h1>BMSTU <span>Сервис</span></h1>
+						<p>ремонт портативной техники</p>
+					</a>
+				</div>
+			</div>
+			<div class = "col-xs-12 col-sm-4 col-md-4 col-lg-3 hidden-lg hidden-md hidden-sm">
+				<div class="hd_ttle">
+					<p>ст. Бауманская</p>
+					<div></div>
+					<h3>+7 (963) 656-83-77</h3>
+					<div></div>
+					<span class="hidden-xs"> пн-пт: 8:00 - 20:00  cб,вс: 8:00 -17:00</span>
+				</div>
+			</div>
+			<div class = "col-xs-12 col-sm-4 col-md-4 col-lg-5">
+				<div class="oform_order">
+					<a href="#popup" class="fancybox">оформить заявку</a>
+				</div>
+			</div>
+			<div class = "col-xs-12 col-sm-4 col-md-4 col-lg-3 hidden-xs">
+				<div class="hd_ttle">
+					<p>ст. Бауманская</p>
+					<div></div>
+					<h3>+7 (963) 656-83-77</h3>
+					<div></div>
+					<span> пн-пт: 8:00 - 20:00  cб,вс: 8:00 -17:00</span>
+				</div>
+			</div>
+		</div>
+	</header>
+	<nav class="navbar navbar-default" role="navigation">
+		<div class="wr_main_menu default" id="wr_main_menu">
+			<div class="main_menu">
+				<div class = "row">
+					<div class = "col-xs-12 col-sm-8 col-md-8 col-lg-7 hidden-sm hidden-xs">
+						<ul class="menu">
+							<li>
+								<a href="#" class="icons_1" data-jq-dropdown="#jq-dropdown1">Ноутбуки</a>
+								<ul id="jq-dropdown1" class="submenu jq-dropdown jq-dropdown-tip">
+									<li>
+										<a href="#" class="main_name">asus</a>
+										<a href="#" class="name">Ноутбук asus</a>
+										<a href="#" class="name">Ноутбук asus</a>
+										<a href="#" class="name">Ноутбук asus</a>
+										<a href="#" class="name">Ноутбук asus</a>
+									</li>
+									<li>
+										<a href="#" class="main_name">asus</a>
+										<a href="#" class="name">Ноутбук asus</a>
+										<a href="#" class="name">Ноутбук asus</a>
+										<a href="#" class="name">Ноутбук asus</a>
+										<a href="#" class="name">Ноутбук asus</a>
+									</li>
+									<li>
+										<a href="#" class="main_name">asus</a>
+										<a href="#" class="name">Ноутбук asus</a>
+										<a href="#" class="name">Ноутбук asus</a>
+										<a href="#" class="name">Ноутбук asus</a>
+										<a href="#" class="name">Ноутбук asus</a>
+									</li>
+									<li>
+										<a href="#" class="main_name">asus</a>
+										<a href="#" class="name">Ноутбук asus</a>
+										<a href="#" class="name">Ноутбук asus</a>
+										<a href="#" class="name">Ноутбук asus</a>
+										<a href="#" class="name">Ноутбук asus</a>
+									</li>
+									<li class="aall_ustr">
+										<a href="#">Все устройства</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#" class="icons_2" data-jq-dropdown="#jq-dropdown2">Телефоны</a>
+								<ul id="jq-dropdown2" class="submenu jq-dropdown jq-dropdown-tip">
+									<li>
+										<a href="#" class="main_name">asus</a>
+										<a href="#" class="name">Ноутбук asus</a>
+										<a href="#" class="name">Ноутбук asus</a>
+										<a href="#" class="name">Ноутбук asus</a>
+										<a href="#" class="name">Ноутбук asus</a>
+									</li>
+									<li>
+										<a href="#" class="main_name">asus</a>
+										<a href="#" class="name">Ноутбук asus</a>
+										<a href="#" class="name">Ноутбук asus</a>
+									</li>
+									<li>
+										<a href="#" class="main_name">asus</a>
+										<a href="#" class="name">Ноутбук asus</a>
+										<a href="#" class="name">Ноутбук asus</a>
+									</li>
+									<li>
+										<a href="#" class="main_name">asus</a>
+										<a href="#" class="name">Ноутбук asus</a>
+										<a href="#" class="name">Ноутбук asus</a>
+										<a href="#" class="name">Ноутбук asus</a>
+										<a href="#" class="name">Ноутбук asus</a>
+									</li>
+									<li class="aall_ustr">
+										<a href="#">Все устройства</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#" class="icons_3" data-jq-dropdown="#jq-dropdown3">Планшеты</a>
+								<ul id="jq-dropdown3" class="submenu jq-dropdown jq-dropdown-tip">
+									<li>
+										<a href="#" class="main_name">asus</a>
+										<a href="#" class="name">Ноутбук asus</a>
+										<a href="#" class="name">Ноутбук asus</a>
+									</li>
+									<li>
+										<a href="#" class="main_name">asus</a>
+										<a href="#" class="name">Ноутбук asus</a>
+										<a href="#" class="name">Ноутбук asus</a>
+									</li>
+									<li>
+										<a href="#" class="main_name">asus</a>
+										<a href="#" class="name">Ноутбук asus</a>
+										<a href="#" class="name">Ноутбук asus</a>
+									</li>
+									<li>
+										<a href="#" class="main_name">asus</a>
+										<a href="#" class="name">Ноутбук asus</a>
+									</li>
+									<li class="aall_ustr">
+										<a href="#">Все устройства</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#" class="icons_4" data-jq-dropdown="#jq-dropdown4">APPLE</a>
+								<ul id="jq-dropdown4" class="submenu jq-dropdown jq-dropdown-tip">
+									<li>
+										<a href="#" class="main_name">asus</a>
+										<a href="#" class="name">Ноутбук asus</a>
+									</li>
+									<li>
+										<a href="#" class="main_name">asus</a>
+										<a href="#" class="name">Ноутбук asus</a>
+									</li>
+									<li>
+										<a href="#" class="main_name">asus</a>
+										<a href="#" class="name">Ноутбук asus</a>
+										<a href="#" class="name">Ноутбук asus</a>
+									</li>
+									<li>
+										<a href="#" class="main_name">asus</a>
+										<a href="#" class="name">Ноутбук asus</a>
+									</li>
+									<li class="aall_ustr">
+										<a href="#">Все устройства</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div class = "col-xs-12 col-sm-6 col-md-4 col-lg-2 hidden-md hidden-sm hidden-xs">
+						<div class="status">
+							<a href="#popup2" class="fancybox">Статус заявки</a>
+						</div>
+					</div>
+					<div class = "col-xs-12 col-sm-12 col-md-4 col-lg-3">
+						<div class="navbar-header hidden-lg hidden-md">
+							<div class="status">
+								<a href="#popup2" class="fancybox">Статус заявки</a>
+							</div>
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+						</div>
+						<ul class="mini_menu hidden-sm hidden-xs">
+							<li>
+								<a href="#" class="discounts">Скидки</a>
+							</li>
+							<li>
+								<a href="#">О нас</a>
+							</li>
+							<li>
+								<a href="#">Контакты</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- Меню для мобильных устройств -->
+			<div class="mob_menu">
+				<div class="container-fluid">
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav">
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Ноутбуки <b class="caret"></b></a>
+								<ul class="dropdown-menu">
+									<li>
+										<a href="#">ASUS</a>
+										<ul class="dropmenu">
+											<li>
+												<a href="#" class="name">Ноутбук asus</a>
+												<a href="#" class="name">Ноутбук asus</a>
+												<a href="#" class="name">Ноутбук asus</a>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<a href="#">ASUS</a>
+										<ul class="dropmenu">
+											<li>
+												<a href="#" class="name">Ноутбук asus</a>
+												<a href="#" class="name">Ноутбук asus</a>
+												<a href="#" class="name">Ноутбук asus</a>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<a href="#">ASUS</a>
+										<ul class="dropmenu">
+											<li>
+												<a href="#" class="name">Ноутбук asus</a>
+												<a href="#" class="name">Ноутбук asus</a>
+												<a href="#" class="name">Ноутбук asus</a>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Телефоны <b class="caret"></b></a>
+								<ul class="dropdown-menu">
+									<li>
+										<a href="#">ASUS</a>
+										<ul class="dropmenu">
+											<li>
+												<a href="#" class="name">Ноутбук asus</a>
+												<a href="#" class="name">Ноутбук asus</a>
+												<a href="#" class="name">Ноутбук asus</a>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<a href="#">ASUS</a>
+										<ul class="dropmenu">
+											<li>
+												<a href="#" class="name">Ноутбук asus</a>
+												<a href="#" class="name">Ноутбук asus</a>
+												<a href="#" class="name">Ноутбук asus</a>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<a href="#">ASUS</a>
+										<ul class="dropmenu">
+											<li>
+												<a href="#" class="name">Ноутбук asus</a>
+												<a href="#" class="name">Ноутбук asus</a>
+												<a href="#" class="name">Ноутбук asus</a>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Планшеты <b class="caret"></b></a>
+								<ul class="dropdown-menu">
+									<li>
+										<a href="#">ASUS</a>
+										<ul class="dropmenu">
+											<li>
+												<a href="#" class="name">Ноутбук asus</a>
+												<a href="#" class="name">Ноутбук asus</a>
+												<a href="#" class="name">Ноутбук asus</a>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<a href="#">ASUS</a>
+										<ul class="dropmenu">
+											<li>
+												<a href="#" class="name">Ноутбук asus</a>
+												<a href="#" class="name">Ноутбук asus</a>
+												<a href="#" class="name">Ноутбук asus</a>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<a href="#">ASUS</a>
+										<ul class="dropmenu">
+											<li>
+												<a href="#" class="name">Ноутбук asus</a>
+												<a href="#" class="name">Ноутбук asus</a>
+												<a href="#" class="name">Ноутбук asus</a>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">APPLE <b class="caret"></b></a>
+								<ul class="dropdown-menu">
+									<li>
+										<a href="#">ASUS</a>
+										<ul class="dropmenu">
+											<li>
+												<a href="#" class="name">Ноутбук asus</a>
+												<a href="#" class="name">Ноутбук asus</a>
+												<a href="#" class="name">Ноутбук asus</a>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<a href="#">ASUS</a>
+										<ul class="dropmenu">
+											<li>
+												<a href="#" class="name">Ноутбук asus</a>
+												<a href="#" class="name">Ноутбук asus</a>
+												<a href="#" class="name">Ноутбук asus</a>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<a href="#">ASUS</a>
+										<ul class="dropmenu">
+											<li>
+												<a href="#" class="name">Ноутбук asus</a>
+												<a href="#" class="name">Ноутбук asus</a>
+												<a href="#" class="name">Ноутбук asus</a>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<!-- Меню для мобильных устройств -->
+	<div class="wr_container">
+		<div class="container">
+			<h2>Контакты</h2>
+			<ul>
+				<li>
+					<a href="#">Главная</a>
+				</li>
+				<li>
+					<a href="#">Телефоны</a>
+				</li>
+				<li>
+					<a href="#">Samsung</a>
+				</li>
+				<li>
+					<a href="#">Galaxy A</a>
+				</li>
+				<li>
+					<a href="#" class="active">Ремонт Samsung Galaxy A7</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="associate">
+		<h2>Свяжитесь с нами</h2>
+		<ul>
+			<li>
+				<a class="work2">пн-пт: 10:00 - 17:00 св,вс: 10:00 - 13: 00</a>
+			</li>
+			<li>
+				<a href="tel:+7(343)7777777" class="phone2">+7 (343) 777 77 77</a>
+			</li>
+			<li>
+				<a href="mailto:support@tel.ru" class="email2">support@tel.ru</a>
+			</li>
+			<li>
+				<a href="#f10" class="adress2">г.Екатеринбург ул. Ленина 35</a>
+			</li>
+		</ul>
+	</div>
+	<div class="map" id="f10">
+		<h2>Приезжайте к нам</h2>
+		<div class="bl_mp">
+			<script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=-PybKMtK4ybzYdR80vwbiKiF5BXBtDY0&width=100%&height=650&lang=ru_UA&sourceType=constructor"></script>
+		</div>
+	</div>
+	<div class="wr_report">
+		<div class="report">
+			<h2>Оставьте нам сообщение</h2>
+			<form name="Myform" action="#" method="post">
+				<div class = "row">
+					<div class = "col-xs-12 col-sm-4 col-md-4 col-lg-4">
+						<div class="report_ipnut">
+							<label>Ваше Имя</label>
+							<input type="text" name="name" placeholder="" />
+						</div>
+					</div>
+					<div class = "col-xs-12 col-sm-4 col-md-4 col-lg-4">
+						<div class="report_ipnut">
+							<label>Ваш телефон</label>
+							<input type="text" name="phone" placeholder="" />
+						</div>
+					</div>
+					<div class = "col-xs-12 col-sm-4 col-md-4 col-lg-4">
+						<div class="report_ipnut">
+							<label>E-mail</label>
+							<input type="text" name="email" placeholder="" />
+						</div>
+					</div>
+					<div class = "col-xs-12 col-sm-12 col-md-12 col-lg-12">
+						<div class="report_textarea">
+							<label>Ваше сообщение</label>
+							<textarea cols="5" rows="5"></textarea>
+						</div>
+					</div>
+				</div>
+				<button>оформить заявку</button>
+			</form>
+		</div>
+	</div>
+	<div class="bl_ttle">
+		<h2>Почему именно мы? Все очень просто!</h2>
+		<p>Наш сервисный центр придерживается политики «приведи друга». По статистике каждый третий клиент рекомендует нас, либо обращаться к нам повторно. За долгое время мы наработали большую базу лояльных клиентов, что для нас очень важно, так как отпадает надобность тратить огромные средства на рекламные компании, что позволяет переложить расходы на более важные моменты, которые поднимают планку качества выполняемых нами услуг на новый уровень. Например, в нашем штате работают только квалифицированные специалисты, и каждый мастер выполняет именно ту задачу, в которой он разбирается практически идеально.</p>
+		<p>Стоит так же отметить, что мы используем только качественные комплектующие, установка которых, гарантирует длительную работу отремонтированного устройства в нашем сервисе. Мы дорожим каждым клиентом, доверяйте свою технику профессионалам и она прослужит Вам еще очень долго!</p>
+	</div>
+	<div class="wr_bottom">
+		<div class="bottom">
+			<div class = "row">
+				<div class = "col-xs-12 col-sm-6 col-md-4 col-lg-4">
+					<div class="about">
+						<div class="border"></div>
+						<h2>О НАС</h2>
+						<ul>
+							<li>
+								<a href="#">Как мы работаем?</a>
+							</li>
+							<li>
+								<a href="#">Выезд мастера и курьера</a>
+							</li>
+							<li>
+								<a href="#">Гарантии</a>
+							</li>
+							<li>
+								<a href="#">Наш блог</a>
+							</li>
+							<li>
+								<a href="#">Вопросы и ответы</a>
+							</li>
+							<li>
+								<a href="#">Отзывы</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class = "col-xs-12 col-sm-6 col-md-4 col-lg-4">
+					<div class="contacts">
+						<div class="border br2"></div>
+						<h2>Контакты</h2>
+						<ul>
+							<li>
+								<a href="#" class="telephone">+7 (343) 777 77 77</a>
+							</li>
+							<li>
+								<p class="email">support@tel.ru</p>
+							</li>
+							<li>
+								<p class="adress">г.Екатеринбург ул. Ленина 35</p>
+							</li>
+							<li>
+								<p class="work">пн-пт: 10:00 - 17:00 св,вс: 10:00 - 13: 00</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class = "col-xs-12 col-sm-12 col-md-4 col-lg-4">
+					<div class="wr_feedback">
+						<div class="feedback">
+							<h2>Оставьте заявку на звонок</h2>
+							<form name="myfrom" action="#" method="post">
+								<div>	
+									<label>Ваше имя:</label>
+									<input type="text" name="name" placeholder="" />
+									<label>Ваш телефон:</label>
+									<input type="text" name="phone" placeholder="" />
+									<button>Оставить заявку</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<div class="footer">
+			<div class="ft_colum_left">
+				<p>&copy; 2013 BMSTUСервис</p>
+			</div>
+			<div class="ft_colum_right">
+				<ul>
+					<li>
+						<a href="#" class="socicon-vkontakte"></a>
+					</li>
+					<li>
+						<a href="#" class="socicon-facebook"></a>
+					</li>
+					<li>
+						<a href="#" class="socicon-youtube"></a>
+					</li>
+					<li>
+						<a href="#" class="socicon-instagram"></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+	
+	<div class="popup" id="popup">
+		<h2>Оформить заявку</h2>
+		<form name="myfrom" action="#" method="post">
+			<div>	
+				<label>Ваше имя:</label>
+				<input type="text" name="name" placeholder="" />
+				<label>Ваш телефон:</label>
+				<input type="text" name="phone" id="phone3" class="foc_telephone" placeholder="+7-___-___-__-__" />
+				<label>Модель телефона:</label>
+				<input type="text" name="model" placeholder="" />
+				<button>Отправить</button>
+			</div>
+		</form>
+	</div>
+	
+	<div class="popup" id="popup2">
+		<h2>Статус заявки</h2>
+		<form name="myfrom" action="#" method="post">
+			<div>	
+				<label>Ваше имя:</label>
+				<input type="text" name="name" placeholder="" />
+				<label>Ваш телефон:</label>
+				<input type="text" name="phone" id="phone4" class="foc_telephone" placeholder="+7-___-___-__-__" />
+				<label>Модель телефона:</label>
+				<input type="text" name="model" placeholder="" />
+				<button>Отправить</button>
+			</div>
+		</form>
+	</div>
+</body>
+</html>
